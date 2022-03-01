@@ -16,7 +16,7 @@ COPY router.config /usr/share/i2p/router.config
 COPY i2ptunnel.config /usr/share/i2p/i2ptunnel.config
 COPY subscriptions.txt /usr/share/i2p/addressbook/subscriptions.txt
 COPY hosts.txt /usr/share/i2p/hosts.txt
-RUN /etc/init.d/i2p start
+RUN /etc/init.d/i2p start && sleep 10 && /etc/init.d/i2p stop
 
 CMD /etc/init.d/i2p start && tail -f /var/log/i2p/wrapper.log 
 
