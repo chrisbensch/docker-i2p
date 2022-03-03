@@ -1,7 +1,8 @@
 version: "3"
 services:
-  docker-i2p:
+  i2p:
     image: chrisbensch/docker-i2p:latest
+    container_name: i2p
     ports:
       - '7654:7654'
       - '7656:7656'
