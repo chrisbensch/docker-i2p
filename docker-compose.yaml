@@ -11,4 +11,6 @@ services:
       - '4445:4445'
       - '6668:6668'
       - '6669:6669'
+    volumes:
+      - ./i2p/data/torrents/:/data/torrents/
     restart: always
